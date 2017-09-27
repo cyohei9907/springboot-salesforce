@@ -19,7 +19,7 @@
               tr.append($("<td>").text(account.Id));
               tr.append($("<td>").text(account.Name));
               tr.append($("<td>").text(account.Industry));
-              tr.append($("<td>").text(account.Rating));
+              tr.append($("<td>").text(account.BillingAddress));
               $("tbody").append(tr);
             });
           });
@@ -51,7 +51,7 @@
                         <div class="slds-truncate" title="Id">Industry</div>
                     </th>
                     <th scope="col">
-                        <div class="slds-truncate" title="Id">Rating</div>
+                        <div class="slds-truncate" title="Id">BillingAddress</div>
                     </th>
                 </tr>
             </thead>
