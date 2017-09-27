@@ -39,8 +39,11 @@ public class Force {
 
         Map<String, String> params = new HashMap<>();
         params.put("q", "SELECT Id, Name, Type, Industry, BillingAddress FROM Account");
-
-        return restTemplate.getForObject(url, QueryResultAccount.class, params).records;
+        List<Account> accLst = restTemplate.getForObject(url, QueryResultAccount.class, params).records;
+        if(null != accLst && accLst.size() >0){
+        	System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ : City " + accLst.get(0).billingAddress.getCity());
+        }
+        return accLst;
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
