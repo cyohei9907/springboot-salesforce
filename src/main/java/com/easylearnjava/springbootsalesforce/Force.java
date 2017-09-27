@@ -47,7 +47,7 @@ public class Force {
         public String Id;
         public String Name;
         public String Industry;
-        public String BillingAddress;
+        public String BillingAddresses;
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
