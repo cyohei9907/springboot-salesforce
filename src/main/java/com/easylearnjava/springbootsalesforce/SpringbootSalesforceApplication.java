@@ -8,6 +8,8 @@ import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.easylearnjava.springbootsalesforce.service.Force;
+
 import java.util.List;
 
 @SpringBootApplication
