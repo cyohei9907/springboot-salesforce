@@ -16,7 +16,7 @@ import java.util.Map;
 @Component
 public class Force {
 
-    private static final String REST_VERSION = "35.0";
+    private static final String REST_VERSION = "40.0";
 
     @Bean
     private OAuth2RestTemplate oAuth2RestTemplate(OAuth2ProtectedResourceDetails resource, OAuth2ClientContext context) {
@@ -37,7 +37,7 @@ public class Force {
         String url = restUrl(principal) + "query/?q={q}";
 
         Map<String, String> params = new HashMap<>();
-        params.put("q", "SELECT Id, Name, Type, Industry, Rating FROM Account");
+        params.put("q", "SELECT Id, Name, Type, Industry, BillingAddress FROM Account");
 
         return restTemplate.getForObject(url, QueryResultAccount.class, params).records;
     }
@@ -47,7 +47,7 @@ public class Force {
         public String Id;
         public String Name;
         public String Industry;
-        public String Rating;
+        public String BillingAddress;
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
