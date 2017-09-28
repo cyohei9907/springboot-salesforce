@@ -1,5 +1,8 @@
 package com.easylearnjava.springbootsalesforce.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class BillingAddress {
 	
 	private String city;
