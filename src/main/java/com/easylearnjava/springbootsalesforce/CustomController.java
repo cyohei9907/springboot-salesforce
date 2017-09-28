@@ -30,7 +30,7 @@ public class CustomController {
         return accountService.accounts(principal);
     }
     
-    @RequestMapping(value="/accounts", method = RequestMethod.POST)
+    @RequestMapping(value="/accountss", method = RequestMethod.POST)
     public Account saveAccount(OAuth2Authentication principal, @RequestBody final Account foo) {
     	System.out.println("Post method called...");
     	return null;
