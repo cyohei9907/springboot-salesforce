@@ -9,7 +9,6 @@ public class Account {
 	public String Name;
 	public String Industry;
 	public BillingAddress BillingAddress;
-	public String sfbillingAddress;
 	
 	public String getId() {
 		return Id;
@@ -41,14 +40,6 @@ public class Account {
 
 	public void setBillingAddress(BillingAddress billingAddress) {
 		BillingAddress = billingAddress;
-	}
-
-	public String getSfbillingAddress() {
-		return sfbillingAddress;
-	}
-
-	public void setSfbillingAddress(String sfbillingAddress) {
-		this.sfbillingAddress = sfbillingAddress;
 	}
 
 	@Override

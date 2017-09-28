@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,6 +28,12 @@ public class CustomController {
     @RequestMapping(value="/accounts", method = RequestMethod.GET)
     public List<Account> accounts(OAuth2Authentication principal) {
         return accountService.accounts(principal);
+    }
+    
+    @RequestMapping(value="/accounts", method = RequestMethod.POST)
+    public Account saveAccount(OAuth2Authentication principal, @RequestBody final Account foo) {
+    	System.out.println("Post method called...");
+    	return null;
     }
     
 
