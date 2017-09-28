@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.oauth2.client.OAuth2ClientContext;
 import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.security.oauth2.client.resource.OAuth2ProtectedResourceDetails;
@@ -16,6 +17,7 @@ import com.easylearnjava.springbootsalesforce.model.Account;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Component
+@Lazy
 public class AccountService {
 
     private static final String REST_VERSION = "40.0";

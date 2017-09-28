@@ -7,63 +7,98 @@
 
     <title>Hello Spring Salesforce</title>
 
-    <link rel="stylesheet" type="text/css" href="webjars/salesforce-lightning-design-system/2.1.4/assets/styles/salesforce-lightning-design-system.min.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="webjars/salesforce-lightning-design-system/2.1.4/assets/styles/salesforce-lightning-design-system.min.css"/> -->
+    
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
   
+  	<script src="https://www.w3schools.com/lib/codemirror.js"></script>
     <script>
-        $(function() {
-          $.get("/accounts", function(data) {
-            $("tbody").empty();
-            $.each(data, function(i, account) {
-              var tr = $("<tr>");
-              tr.append($("<td >").text(account.Id));
-              tr.append($("<td >").text(account.Name));
-              tr.append($("<td >").text(account.Industry));
-              tr.append($("<td >").text(account.BillingAddress.city));
-              /* tr.append( 
-            		  $('<button/>', {
-            		        text: 'Validate Address', //set text 1 to 10
-            		        id: 'btn_'+account.Id,
-            		        click: function () { alert('hi : ' + account.Id); }
-            		    })); */
-              $("tbody").append(tr);
-            });
-          });
-        });
+        
     </script>
+    
+    <!-- <script>
+		$(document).ready( function() {    
+		        $("#content").load("/swagger-ui.html");    
+		});
+	</script> -->
+    
+    <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+ 
 </head>
 <body>
-    <header class="slds-global-header_container">
-        <div class="slds-global-header slds-grid slds-grid--align-spread">
-            <div class="slds-global-header__item">
-                <div class="slds-text-heading--large">Hello Spring Salesforce</div>
-            </div>
-        </div>
-    </header>
-
-    <div class="slds-container--center slds-container--medium" style="margin-top: 60px;">
-        <div class="slds-text-heading--medium">Salesforce Accounts</div>
-
-        <table class="slds-table slds-table--bordered slds-table--cell-buffer" >
-            <thead>
-                <tr class="slds-text-title--caps">
-                    <th scope="col">
-                        <div class="slds-truncate" title="Id">Id</div>
-                    </th>
-                    <th scope="col">
-                        <div class="slds-truncate" title="Id">Name</div>
-                    </th>
-                    <th scope="col">
-                        <div class="slds-truncate" title="Id">Industry</div>
-                    </th>
-                    <th scope="col">
-                        <div class="slds-truncate" title="Id">BillingAddress</div>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+        
+    <div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Spring Boot - Sales Force - Heroku</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="/index.html">Home</a></li>
+        <li><a href="/viewAccounts.html">Accounts</a></li>
+        <li><a href="/viewContacts.html">Contacts</a></li>
+        
+      </ul><br>
     </div>
+
+	
+    <div class="col-sm-9">
+    
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Spring and SalesForce Integrations</h1>      
+    <p>Coding is fun...</p>
+  </div>
+</div>
+    <table class="table table-striped table-responsive">
+	   <tbody>
+		<tr><td>
+			<!-- <div> 
+    			<object type="text/html" data="http://validator.w3.org/" width="800px" height="600px" style="overflow:auto;border:5px ridge blue">
+    			</object>
+ 			</div> -->
+ 			<!-- <div id ="content"></div> -->
+ 		<h4>	This application helps in interacting with the data in the users salesforce account and helps to perform CRUD operations... :)</h4> 
+ 
+		</td></tr>	   
+	   </tbody>
+  </table>
+    </div>
+</div>
+</div>
+    
+    
 </body>
 </html>
