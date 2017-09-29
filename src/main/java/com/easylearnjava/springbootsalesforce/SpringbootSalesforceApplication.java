@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @EnableOAuth2Sso
 public class SpringbootSalesforceApplication {
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootSalesforceApplication.class, args);
 	}

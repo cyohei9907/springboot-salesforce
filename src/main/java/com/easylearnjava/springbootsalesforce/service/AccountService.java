@@ -45,8 +45,7 @@ public class AccountService {
         List<Account> accLst = restTemplate.getForObject(url, QueryResultAccount.class, params).records; 
         
         return accLst;
-    }
-    
+    }    
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     private static class QueryResult<T> {

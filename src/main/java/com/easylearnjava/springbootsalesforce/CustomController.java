@@ -5,9 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.easylearnjava.springbootsalesforce.model.Account;
@@ -30,10 +31,10 @@ public class CustomController {
         return accountService.accounts(principal);
     }
     
-    @RequestMapping(value="/accountss", method = RequestMethod.POST)
-    public Account saveAccount(OAuth2Authentication principal, @RequestBody final Account foo) {
-    	System.out.println("Post method called...");
-    	return null;
+    @RequestMapping(value="/saveaccount", method = RequestMethod.GET)
+    @ResponseBody
+    public void saveAccount(OAuth2Authentication principal, @RequestParam(value="Name") String accName, @RequestParam(value="Industry") String accIndustry, @RequestParam(value="BillingAddress") String accbillingAddress) {
+    	System.out.println("Method call to save accounts object");
     }
     
 
